@@ -26,7 +26,6 @@ public BooleanPrompt(char beginPromptCharacter, boolean defaultChoice)
 
 ```java
 // Creating a prompt with multiple questions
-import com.shreyaslad.CLIFormat.Prompts.BooleanPrompt;
 
 String[] questions = {"Question 1?", "Question 2?", "Question 3?"};
 BooleanPrompt booleanPrompt = new BooleanPrompt('>', true);
@@ -39,7 +38,6 @@ System.out.println(list);
 
 ```java
 // Creating a prompt with one question
-import com.shreyaslad.CLIFormat.Prompts.BooleanPrompt;
 
 BooleanPrompt booleanPrompt = new BooleanPrompt('>', true);
 booleanPrompt.createPromptWithOneQuestion("Continue?");
@@ -72,12 +70,16 @@ StringPrompt(boolean isRecursive, char promptBeginCharacter, String escapeSequen
 **Examples:**
 
 ```java
+// Creating a prompt with one question
+
 StringPrompt stringPrompt = new StringPrompt(true, '>', "exit");
 stringPrompt.createPrompt("What is your favorite color? ");
 String answer = stringPrompt.getLastAnswer();
 ```
 
 ```java
+// Creating a prompt with multiple questions
+
 StringPrompt stringPrompt = new StringPrompt(true, '>', "exit");
 String[] questions = {"question1", "question2", "question3"};
 
@@ -90,8 +92,19 @@ LinkedList<String> answers = stringPrompt.getAllAnswers();
 **Constructor:**
 
 ```java
+// Creating a prompt with one question
+
 NumberPrompt<Integer> numberPrompt = new NumberPrompt<>();
 numberPrompt.createPrompt("Enter a number from 1-10");
 
 int answer = numberPrompt.getLastAnswer;
+```
+
+```java
+// Creating a prompt with multiple questions
+
+String[] questions = {"question1", "question2", "question3"};
+NumberPrompt<Integer> numberPrompt = new NumberPrompt<>();
+
+LinkedList<Integer> answers = numberPrompt.getAllAnswers();
 ```
