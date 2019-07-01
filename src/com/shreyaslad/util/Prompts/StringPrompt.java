@@ -25,7 +25,7 @@ public class StringPrompt {
         this.beginCharacter = beginCharacter;
     }
 
-    public void setAndPrintQuestions(String[] questions) {
+    public void createPrompts(String[] questions) {
         Scanner scanner = new Scanner(System.in);
 
         if (questions.length == 0) {
@@ -54,7 +54,7 @@ public class StringPrompt {
         }
     }
 
-    public void setNextQuestion(String question) {
+    public void createPrompt(String question) {
         Scanner scanner = new Scanner(System.in);
 
         this.question = question;

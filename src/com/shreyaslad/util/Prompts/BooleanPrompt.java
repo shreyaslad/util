@@ -39,7 +39,7 @@ public class BooleanPrompt {
     }
 
     @SuppressWarnings("Duplicates")
-    public void createPromptWithMultipleQuestions(String[] questions) {
+    public void createPrompts(String[] questions) {
 
         if (questions.length == 0) {
             throw new ArrayIndexOutOfBoundsException("No questions supplied in array");
@@ -77,7 +77,7 @@ public class BooleanPrompt {
     }
 
     @SuppressWarnings("Duplicates")
-    public void createPromptWithOneQuestion(String question) {
+    public void createPrompt(String question) {
         if (question.isEmpty()) {
             throw new IllegalArgumentException("Question is empty");
         }
